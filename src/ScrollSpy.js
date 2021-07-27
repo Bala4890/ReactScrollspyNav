@@ -83,8 +83,9 @@ class ScrollSpy extends Component {
 
 	// return the scroll top of the given element
 	elementOffsetTop = (el) => {
-		const rect = el.getBoundingClientRect(),
-			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		const rect = el.getBoundingClientRect();
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollTop = scrollTop - 10;
 		return { top: rect.top + scrollTop };
 	};
 

@@ -14,7 +14,7 @@ class ScrollNav extends Component {
   render() {
     return (
       <div className="container">
-        <div className="sidebar">
+        <div className="sidebar column left">
           <ul>
             <li>
               <NavLink onClick={() => this.replaceUrl("/first")} to="/first">
@@ -43,12 +43,14 @@ class ScrollNav extends Component {
         Notes:
         1- you need may use HashRouter or BrowserRouter in your application
         2- don't forget to use the click listener on NavLink if you don't want to push to the histroy of your app*/}
-        <ScrollSpy data={this.scrollSpyData}>
-          <div className="section first">First section</div>
-          <div className="section second">Second section</div>
-          <div className="section third">Third section</div>
-          <div className="section forth">Forth section</div>
-        </ScrollSpy>
+        <div className="column right">
+            <ScrollSpy data={this.scrollSpyData}>
+                <div className="section first">First section</div>
+                <div className="section second">Second section</div>
+                <div className="section third">Third section</div>
+                <div className="section forth">Forth section</div>
+            </ScrollSpy>
+        </div>
       </div>
     );
   }
